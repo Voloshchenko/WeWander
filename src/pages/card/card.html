@@ -1,0 +1,13 @@
+<ion-content (tap)="closeModal()">
+ 		<ion-item  [ngClass]="{'hidden_gem': (card.type=='hidden gem'), 'ordinary_type': (card.type !='hidden gem')}">
+          {{card.name.toUpperCase()}}
+        </ion-item>      
+        <ion-slides width="100%" pager="true">
+          <ion-slide *ngFor = "let photo of card.img">
+            <img [src]="photo">
+          </ion-slide>
+        </ion-slides>
+        <ion-card-content>
+          <p>{{ card.desc }}</p>        
+        </ion-card-content>         
+</ion-content>

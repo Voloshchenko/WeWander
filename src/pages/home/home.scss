@@ -1,0 +1,122 @@
+ion-content, .scroll-content {
+	padding: 0 !important;
+}
+
+page-home {
+	text-align: center;	 
+	font-weight: 100;
+	letter-spacing: 1px;   
+}
+
+h1{
+	margin-top: 50px !important;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 3rem;
+}
+span {
+	color:#D31328;
+}
+
+ion-card {
+	margin: 10px 0 !important;
+	width: 100% !important;
+}
+
+
+/*Serch bar*/
+
+.search{
+	margin: 0 15%;
+}
+
+ion-searchbar{
+	padding: 0 !important;
+	background: none !important;
+	border: solid 1px !important;
+	border-radius: 20px !important;	
+}
+
+.searchbar-md .searchbar-input{
+	background-color: transparent;
+	color: #161616;
+	box-shadow: none !important;	
+}
+
+.searchbar-input-container {
+	width: 90%;
+    margin: auto;
+}
+
+.searchbar-search-icon {
+	background-image: url(../assets/search.svg) !important;
+	background-size: 30px !important;
+	left: 0 !important;
+}
+
+
+ion-list{
+	width: 100%;
+}
+
+ion-list h6{
+	padding-top: 10px;
+}
+
+.searchResults .item-md{
+	text-align: center;
+}
+
+
+.added {
+	background-color: #D31328;
+	color: white;
+	padding: 15px;
+}
+
+/*Empty block*/
+
+.emptyBlock {
+	position: sticky;
+	top: 200px;
+}
+
+.logo{
+	width: 30%;
+}
+
+/*City cards*/
+
+ion-card {
+    position: relative;
+    text-align: center;
+ }
+
+.card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 10px #7d7d7d;
+} 
+
+.card-subtitle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+ }	
+
+ion-card ion-icon {
+	color: #fff;	    
+	position: absolute;
+    font-size: 2.0em;	
+    padding:20px;
+    right: 0;
+} 
+
+
+
+
+

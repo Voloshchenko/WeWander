@@ -1,0 +1,46 @@
+
+<ion-content padding >
+  <div class="cards">
+
+    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false)" (throwoutright)="voteUp(true)" id="card-stack">
+      <ion-card #mycards1 swing-card *ngFor="let c of favorite.allCards" (tap)="openCard(c)">    
+
+        <img [src]="c.img[0]">
+        <ion-card-content>
+          <h5>{{ c.name.toUpperCase() }}</h5>         
+          <p>{{c.dis}} km 
+            {{cardsSettings.startPointG == "cityCenter" ?  ' from city center' : '' }}
+            {{cardsSettings.startPointG == "myLocation" ?  ' from my location' : '' }}
+            {{cardsSettings.startPointG == "chosenLocation" ?  ' from chosen location' : '' }}
+          </p> 
+          <p> Is Open? {{c.status}}</p> 
+        </ion-card-content>
+      </ion-card>
+
+
+      <div *ngIf = "this.favorite.quit == true" class="noCards">
+        <p>Ooops.. <br>
+          it seems like you're out of new places</p>    
+      </div>
+      <div *ngIf = "favorite.allCards.length == 0 && this.favorite.quit == false" class="noCards">
+        <p>Loading <br>
+         Please wait</p>
+         <ion-spinner name="dots"></ion-spinner> 
+      </div>
+
+    </div>
+  </div>  
+</ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar position="bottom">
+    <button ion-button class="backBtn returnCard" (click)="returnCard()" [disabled]="!removedCard" >
+      <ion-icon name="refresh"></ion-icon>
+    </button>    
+    <button ion-button class="backBtn" (click)="toNavBar()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button class="backBtn complainPlace" (click)="complainPlace()">
+      <ion-icon name="text"></ion-icon>
+    </button>       
+  </ion-toolbar>
+</ion-footer>

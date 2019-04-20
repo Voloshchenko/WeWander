@@ -1,0 +1,41 @@
+page-my-map {
+	.leaflet-marker-icon{
+		border-radius: 100%;
+	}
+
+	.locateBtn {
+		margin-right: 15%;
+		margin-bottom: 40px !important;
+	}
+
+	.listBtn {    
+		margin-left: 15%;
+		margin-bottom: 40px !important;
+	}
+
+
+	ion-footer{
+		z-index: 99999;
+	}
+
+
+	.cardObject {
+		background: white;
+		height: fit-content;
+		width: 100%;
+		z-index: 10000;
+		margin: 0;
+		text-align: left;
+	}
+
+	.cardObject img {
+		height: fit-container;
+		max-height: 100px;
+		width: auto;
+	}
+
+	.col, .grid {
+		padding: 0;
+	}
+
+}

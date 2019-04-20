@@ -1,0 +1,69 @@
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="cardsSettings.startPointG">
+    <ion-list-header>
+      Filter by distance from
+    </ion-list-header>
+    <ion-item>
+      <ion-label> My location {{cardsSettings.startPointG == "myLocation" ? cardsSettings.distanceG + ' km': '' }} </ion-label>
+      <ion-radio checked="true" value="myLocation" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label> Chosen location {{cardsSettings.startPointG == "chosenLocation" ? cardsSettings.distanceG + ' km': '' }} </ion-label>
+      <ion-radio value="chosenLocation"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label> City center {{cardsSettings.startPointG == "cityCenter" ? cardsSettings.distanceG + ' km' : '' }} </ion-label>
+      <ion-radio value="cityCenter"></ion-radio>
+    </ion-item> 
+    <ion-item>
+      <ion-range min="1" max="40" pin="true" [(ngModel)]="cardsSettings.distanceG" color="secondary">
+        <ion-icon range-left small name="distance"></ion-icon>
+        <ion-icon range-right name="distance"></ion-icon>
+      </ion-range>
+    </ion-item>       
+  </ion-list>
+  <ion-list>  
+    <ion-list-header>
+        What do you want?
+    </ion-list-header> 
+<!--     <ion-item>
+      <ion-label>All</ion-label>
+      <ion-toggle [(ngModel)]="cardsSettings.all"></ion-toggle>
+    </ion-item>  -->    
+    <ion-item>
+      <ion-label>Food</ion-label>
+      <ion-toggle [(ngModel)]="cardsSettings.food"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Drinks</ion-label>
+      <ion-toggle [(ngModel)]="cardsSettings.drinks"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nightlife</ion-label>
+      <ion-toggle [(ngModel)]="cardsSettings.nightlife"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Attractions</ion-label>
+      <ion-toggle [(ngModel)]="cardsSettings.attractions"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Museums</ion-label>
+      <ion-toggle [(ngModel)]="cardsSettings.museums"></ion-toggle>
+    </ion-item>    
+    <ion-item>
+      <ion-label>Parks</ion-label>
+      <ion-toggle [(ngModel)]="cardsSettings.parks"></ion-toggle>
+    </ion-item>                
+  </ion-list>
+<!--     <ion-item>
+      <ion-label floating>Hotel Address</ion-label>
+      <ion-input></ion-input>
+    </ion-item>  -->           
+</ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar position="bottom">
+    <button ion-button class="backBtn" (click)="toNavBar()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-footer>

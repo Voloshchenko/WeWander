@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>FAVORITES</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-searchbar
+	  [showCancelButton]="shouldShowCancel"
+	  (ionInput)="onInput($event)">
+  </ion-searchbar>
+  <div *ngIf="favorite.favorites.length != 0">
+    <ion-list  *ngFor="let place of favorite.favorites as place; index as i ">
+	  <ion-item-sliding #item>
+	    <ion-item (click)="openCard(place.place)" [ngClass]="{'hidden_gem': (place.place.hidden_gem), 'ordinary_type': (place.place.type !='hidden gem'), 'visited': (place.place.seen == true)}">
+	        <h2>{{place.place.name}}</h2>
+	    </ion-item>
+	    <ion-item-options side="left">
+	      <button ion-button (click)="delete(place, i)"><ion-icon name="trash"></ion-icon></button>
+	    </ion-item-options>
+	    <ion-item-options side="right">
+	      <button ion-button (click)="visit(place.place)" *ngIf="!place.place.seen">Visit</button>
+	      <button ion-button (click)="visit(place.place)" *ngIf="place.place.seen">Visited</button>
+	    </ion-item-options>
+	  </ion-item-sliding>
+	</ion-list>
+  </div>
+	<p *ngIf="favorite.favorites.length == 0">Nothing</p>
+</ion-content>
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom" color="light">
+		<button ion-button round (click)="toMap()">Map</button>
+	</ion-toolbar>
+</ion-footer>

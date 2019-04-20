@@ -1,0 +1,136 @@
+// http://ionicframework.com/docs/theming/
+
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+	background-image: none !important;
+}
+
+.show-tabbar {
+	padding: 10px 0 !important;
+}
+
+/*________For Swiping images__________*/
+	ion-slides, .swiper-slide, .swiper-wrapper, .swiper-container{
+		height: fit-content !important;
+	}
+
+
+.content-md {
+	color: #161616;
+}
+
+/*_ion-content{
+	background: linear-gradient(to bottom, rgb(55, 76, 177) , rgb(255, 164, 99));
+}
+*/
+
+
+.toolbar-md {
+    padding: 0 !important;
+}
+
+
+.tabs-md-light .tabbar{
+	background:white;
+}
+.item-md {
+	background-color: transparent;
+	color: #161616;
+}
+
+// Button rules
+.toolbar-content{
+	text-align: center;
+}
+
+.button {
+	background: #D31328;
+}
+
+.button span{
+	color:white !important;
+}
+
+.toolbar-background {
+	background: none;
+}
+// tabs overwrite settings
+
+.footer-md::before, .tabs-md[tabsplacement="bottom"] > .tabbar::before {
+	background-image: none;
+}
+
+// .header-md::after, .tabs-md[tabsplacement="top"] > .tabbar::after {
+// 	color: black;
+// }
+// cards header
+
+.ordinary_type{
+	background: #D31328;
+	text-align: center;
+	color: white;
+	font-weight: 100;
+}
+
+.hidden_gem{
+	background: linear-gradient(to right, rgb(253,246,140) , rgb(210,141,13));
+	text-align: center;
+	color: white;
+	font-weight: 100;	
+}
+
+.visited{
+	background: linear-gradient(to right, #b9b9b9, #637084);
+}
+
+.toolbar-md-light .toolbar-background-md{
+	background-color: transparent !important;
+}
+
+.scroll-content {
+        overflow-y: auto !important;
+} 
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.has-title-only span{
+	background: #D31328;
+	color: white;
+	padding: 8px 20px;
+	border-radius: 100px;
+}
+
+.activated .has-title-only span{
+	background: rgba(0,0,0,0.64);
+}
+
+.tabs-md .tab-button-icon{
+	font-size: 3.2rem;
+}
+
+.backBtn {
+	border-radius: 100px;
+	padding: 30px;
+	background-color: linear-gradient(to top, rgb(0,173,238) , rgb(28,83,165));
+    margin-bottom: 10px !important;
+    width: 10%;
+}
+
+.backBtn ion-icon {
+	font-size: 2.4em !important;
+	right: 0.15px;
+}
+
+.toolbar {
+	padding-bottom: 0 !important;
+}
+
+
+ion-spinner {
+  width: 50px;
+  height: 50px;
+  stroke: white;
+  fill: #3a4daf;
+}

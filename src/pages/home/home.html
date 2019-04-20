@@ -1,0 +1,27 @@
+<ion-content padding class="card-background-page">
+    <h1><span>WE</span>WANDER</h1>
+    <div class="search">           
+        <ion-searchbar  placeholder="Choose city" (ionInput)="filterCities($event.target.value)" [ngModel] = "searchbar"></ion-searchbar>
+        <ion-list class="searchResults">
+        	<ion-item *ngFor="let city of searchResults" >
+    		    <h6 [ngClass]="{added: city.added}"  (click)="addCity(city)">{{city.name}}</h6>
+    		</ion-item>	
+        </ion-list>
+    </div>
+    <ion-card  *ngFor="let city of favorite.myCities" >
+        <img [src]="city.city.img" (tap)="showCity(city.city)">
+        <div class="card-title">{{city.city.name}}</div>
+        <div class="card-subtitle">
+            <ion-icon name="close" (tap)="deleteCity(city)"></ion-icon>
+        </div>
+    </ion-card>
+    <div *ngIf="favorite.myCities.length == 0" class="emptyBlock">
+        <div class="centered">   
+            <img src="assets/imgs/logo.png" class="logo">    
+            <h3>Welcome to WeWander</h3>
+            <h6>Chooose your destination</h6>
+       </div>         
+    </div>
+</ion-content>
+
+

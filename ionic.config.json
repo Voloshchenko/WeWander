@@ -1,0 +1,7 @@
+{
+  "name": "wanderGo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

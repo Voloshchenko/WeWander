@@ -1,0 +1,5 @@
+<ion-tabs tabsPlacement="top" selectedIndex=1  color="light" class="tabs-icon-text" >
+  <ion-tab [root]="settings" tabIcon="options" [rootParams]="city"></ion-tab>
+  <ion-tab [root]="cards" [tabTitle]="city" [rootParams]="cityData" class="city_tab"></ion-tab>
+  <ion-tab [root]="map" tabIcon="pin" [rootParams]="cityData"></ion-tab>
+</ion-tabs>

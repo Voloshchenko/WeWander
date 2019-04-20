@@ -1,0 +1,56 @@
+<ion-content>
+	<div id="map" style="width:100%; height:100%;"></div>
+
+<!--     <button ion-button class="backBtn" (click)="toNavBar()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button round (click)="toList()" class="list">List</button>    --> 
+
+
+
+
+
+<ion-footer no-shadow>
+<ion-card *ngIf="showWindow" (tap)="openCard(card)" class="cardObject">
+    <ion-grid>
+        <ion-row>
+          <ion-col col-3><img [src]="card.img[0]"></ion-col>
+          <ion-col col-9>
+              <h4>
+                  {{card.name}}
+              </h4>
+              <p *ngIf ="card.tickets">{{card.tickets}}</p>
+              <p *ngIf ="card.website">{{card.website}}</p>
+              <p *ngIf ="card.type">{{card.type}}</p>
+<!--               <button ion-button small outline round>
+                  <ion-icon name="call"></ion-icon>
+                  Call
+              </button>
+              <button ion-button small outline round>
+                  <ion-icon name="navigate"></ion-icon>
+                  Route
+              </button>
+              <button ion-button small outline round>
+                  <ion-icon name="trash"></ion-icon>
+                  Delete
+              </button>   -->                          
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card>
+
+  <ion-toolbar position="bottom">
+    <button ion-button class="backBtn locateBtn" (click)="focusMyPosition()">
+      <ion-icon name="locate"></ion-icon>
+    </button>    
+    <button ion-button class="backBtn" (click)="toNavBar()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button round (click)="toList()" class="backBtn listBtn">
+	    <ion-icon name="bookmark"></ion-icon>
+	</button>       
+  </ion-toolbar>
+</ion-footer>    
+</ion-content>
+
+    
